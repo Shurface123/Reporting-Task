@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Average Grade Per Department (Bar Chart)</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body { margin: 0; padding: 0; }
+            .chart-container { width: 800px; height: 400px; }
+        </style>
+    </head>
+    <body>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <script>
+            const ctx = document.getElementById("myChart");
+            
+            const chartData = {
+                labels: ["Computer Science","Information Technology","Electrical Engineering","Mechanical Engineering"],
+                datasets: [{
+                    label: "Average Grade Per Department (Bar Chart)",
+                    data: [3.771429,3.75,3.5,2.5],
+                    backgroundColor: ["rgba(54, 162, 235, 0.8)","rgba(255, 99, 132, 0.8)","rgba(75, 192, 192, 0.8)","rgba(255, 206, 86, 0.8)"],
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    borderWidth: 1
+                }]
+            };
+            
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: "top",
+                    },
+                    title: {
+                        display: true,
+                        text: "Average Grade Per Department (Bar Chart)"
+                    }
+                }
+            };
+            
+            new Chart(ctx, {
+                type: "bar",
+                data: chartData,
+                options: chartOptions
+            });
+        </script>
+    </body>
+    </html>

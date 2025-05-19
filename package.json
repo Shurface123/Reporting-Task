@@ -1,0 +1,9 @@
+{
+  "name": "chart-exporter",
+  "version": "1.0.0",
+  "description": "Chart export functionality",
+  "main": "capture-chart.js",
+  "dependencies": {
+    "puppeteer": "^20.7.3"
+  }
+}
